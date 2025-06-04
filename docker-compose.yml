@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  minio:
+    image: quay.io/minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    environment:
+      MINIO_ROOT_USER: minioAdmin
+      MINIO_ROOT_PASSWORD: supersecretpassword
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  minio_data:
+  mongo_data:

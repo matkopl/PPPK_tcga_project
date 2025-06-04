@@ -1,0 +1,10 @@
+docker-compose up -d
+
+docker ps -a
+
+docker stop 
+
+docker rm
+
+
+pip install -r requirements.txt

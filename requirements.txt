@@ -1,0 +1,9 @@
+requests
+pandas
+boto3
+minio
+pymongo
+matplotlib
+plotly
+python-dotenv
+xenaPython
