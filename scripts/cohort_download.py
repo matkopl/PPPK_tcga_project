@@ -20,7 +20,7 @@ if not client.bucket_exists(bucket):
     client.make_bucket(bucket)
 
 BASE_URL = "https://tcga.xenahubs.net/download/"
-TARGET_FILENAME = "HiSeqV2.gz"
+TARGET_FILENAME = "HiSeqV2_PANCAN.gz"
 DATA_DIR = "data/batch"
 os.makedirs(DATA_DIR, exist_ok=True)
 
